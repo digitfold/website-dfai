@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITFOLD AI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 15px 30px;
+            background-color: black;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .navbar .left {
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .navbar .right-button {
+            background-color: white;
+            color: black;
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-left: 20px;
+            margin-right: 50px;
+        }
+
+        .navbar .right-button:hover {
+            background-color: #ddd;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: 100%;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .gallery a {
+            position: relative;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 0px;
+        }
+
+        /* Image Text on Hover */
+        .gallery a::after {
+            content: attr(data-hover-text);
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .gallery a:hover::after {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            .navbar .left {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="left">DIGITFOLD AI</div>
+        <a href="https://digitfold.com" class="right-button">返回官网</a>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="container">
+        <div class="gallery">
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Discover AI Artwork 1">
+                <img src="images/i1.jpg" alt="AI Artwork 1">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Explore AI Artwork 2">
+                <img src="images/i2.jpg" alt="AI Artwork 2">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Creative AI Artwork 3">
+                <img src="images/i3.jpg" alt="AI Artwork 3">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="View AI Artwork 4">
+                <img src="images/i4.jpg" alt="AI Artwork 4">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Impressive AI Artwork 5">
+                <img src="images/i5.jpg" alt="AI Artwork 5">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Unique AI Artwork 6">
+                <img src="images/i6.jpg" alt="AI Artwork 6">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Stylish AI Artwork 7">
+                <img src="images/i7.jpg" alt="AI Artwork 7">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Elegant AI Artwork 8">
+                <img src="images/i8.jpg" alt="AI Artwork 8">
+            </a>
+            <a href="https://digitfold.com" target="_blank" data-hover-text="Artistic AI Artwork 9">
+                <img src="images/i9.jpg" alt="AI Artwork 9">
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h2>DFAI - Next-Gen Film</h2>
+        <p>Copyright © 2025 DIGITFOLD</p>
+    </footer>
+
+</body>
+</html>
